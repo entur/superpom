@@ -5,7 +5,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.5.3</version>
+        <version>2.5.4</version>
     </parent>
 
     <groupId>org.rutebanken.superpom</groupId>
@@ -52,7 +52,7 @@
         <maven-enforcer-plugin.version>1.4.1</maven-enforcer-plugin.version>
 
         <maven-scm-provider-gitexe.version>1.11.2</maven-scm-provider-gitexe.version>
-        <owasp-dependency-check-plugin.version>6.2.2</owasp-dependency-check-plugin.version>
+        <owasp-dependency-check-plugin.version>6.3.1</owasp-dependency-check-plugin.version>
         <gitflow-maven-plugin.version>1.16.0</gitflow-maven-plugin.version>
 
         <logstash.version>6.6</logstash.version>
