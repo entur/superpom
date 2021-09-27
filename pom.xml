@@ -56,7 +56,7 @@
         <gitflow-maven-plugin.version>1.16.0</gitflow-maven-plugin.version>
 
         <logstash.version>6.6</logstash.version>
-        <guava.version>30.1.1-jre</guava.version>
+        <guava.version>31.0.1-jre</guava.version>
 
         <!-- Downloading PubSub emulator is disabled by default-->
         <entur.google.pubsub.emulator.download.skip>true</entur.google.pubsub.emulator.download.skip>
