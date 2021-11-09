@@ -44,7 +44,7 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
         <jacoco-maven-plugin.version>0.8.7</jacoco-maven-plugin.version>
-        <sonar-maven-plugin.version>3.9.0.2155</sonar-maven-plugin.version>
+        <sonar-maven-plugin.version>3.9.1.2184</sonar-maven-plugin.version>
 
         <google-pubsub-emulator.version>0.1.2</google-pubsub-emulator.version>
 
