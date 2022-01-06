@@ -5,7 +5,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.5.7</version>
+        <version>2.5.8</version>
     </parent>
 
     <groupId>org.rutebanken.superpom</groupId>
@@ -44,7 +44,7 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
         <jacoco-maven-plugin.version>0.8.7</jacoco-maven-plugin.version>
-        <sonar-maven-plugin.version>3.9.0.2155</sonar-maven-plugin.version>
+        <sonar-maven-plugin.version>3.9.1.2184</sonar-maven-plugin.version>
 
         <google-pubsub-emulator.version>0.1.2</google-pubsub-emulator.version>
 
@@ -52,7 +52,7 @@
         <maven-enforcer-plugin.version>1.4.1</maven-enforcer-plugin.version>
 
         <maven-scm-provider-gitexe.version>1.11.2</maven-scm-provider-gitexe.version>
-        <owasp-dependency-check-plugin.version>6.3.1</owasp-dependency-check-plugin.version>
+        <owasp-dependency-check-plugin.version>6.5.2</owasp-dependency-check-plugin.version>
         <gitflow-maven-plugin.version>1.16.0</gitflow-maven-plugin.version>
 
         <logstash.version>6.6</logstash.version>
@@ -60,9 +60,6 @@
 
         <!-- Downloading PubSub emulator is disabled by default-->
         <entur.google.pubsub.emulator.download.skip>true</entur.google.pubsub.emulator.download.skip>
-
-        <!--TODO temporary manual upgrade of Logback-->
-        <logback.version>1.2.8</logback.version>
 
     </properties>
 
