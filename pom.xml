@@ -51,7 +51,7 @@
         <!-- overrides version 3.0.0-M2 defined in spring Boot BOM which does not detect inherited plugin versions -->
         <maven-enforcer-plugin.version>1.4.1</maven-enforcer-plugin.version>
 
-        <maven-scm-provider-gitexe.version>1.11.2</maven-scm-provider-gitexe.version>
+        <maven-scm-provider-gitexe.version>1.12.2</maven-scm-provider-gitexe.version>
         <owasp-dependency-check-plugin.version>6.5.2</owasp-dependency-check-plugin.version>
         <gitflow-maven-plugin.version>1.16.0</gitflow-maven-plugin.version>
 
