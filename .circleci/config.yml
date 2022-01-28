@@ -3,6 +3,9 @@ jobs:
   deploy-artifactory:
     docker:
       - image: cimg/openjdk:11.0
+        auth:
+          username: $DOCKERHUB_LOGIN
+          password: $DOCKERHUB_PASSWORD
     steps:
       - run: git config --global user.email "circleci@entur.no"
       - run: git config --global user.name "circleci"
@@ -17,7 +20,9 @@ workflows:
   build_deploy:
     jobs:
       - deploy-artifactory:
-          context: org-carbon
+          context:
+            - org-carbon
+            - global
           filters:
             branches:
               only: master
