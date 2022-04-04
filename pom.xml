@@ -10,7 +10,7 @@
 
     <groupId>org.rutebanken.superpom</groupId>
     <artifactId>superpom</artifactId>
-    <version>1.0.37-SNAPSHOT</version>
+    <version>1.0.37</version>
     <packaging>pom</packaging>
 
     <name>superpom</name>
