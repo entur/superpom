@@ -1,4 +1,12 @@
 version: 2
+
+aliases:
+  - &jfrog-login
+    name: Rename jfrog environment variable for maven setting.xml
+    command: |
+      echo "export JFROG_USER=$ARTIFACTORY_USER"  >> $BASH_ENV
+      echo "export JFROG_PASS=$ARTIFACTORY_PASSWORD"  >> $BASH_ENV   
+
 jobs:
   deploy-artifactory:
     docker:
@@ -13,6 +21,7 @@ jobs:
       - run:
           name: Download Maven settings
           command: wget https://raw.githubusercontent.com/entur/circleci-toolbox-image-java11/master/tools/m2/settings.xml -O .circleci/settings.xml
+      - run: *jfrog-login
       - run: mvn gitflow:release -B -s .circleci/settings.xml -DargLine='-s .circleci/settings.xml' -DpostReleaseGoals=deploy -DskipTestProject=true
 
 workflows:
