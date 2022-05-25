@@ -1,14 +1,30 @@
-version: 2
+version: 2.1
+
+orbs:
+  queue: eddiewebb/queue@volatile
 
 aliases:
   - &jfrog-login
     name: Rename jfrog environment variable for maven setting.xml
     command: |
       echo "export JFROG_USER=$ARTIFACTORY_USER"  >> $BASH_ENV
-      echo "export JFROG_PASS=$ARTIFACTORY_PASSWORD"  >> $BASH_ENV   
+      echo "export JFROG_PASS=$ARTIFACTORY_PASSWORD"  >> $BASH_ENV
+  - &release
+    name: Release
+    command: |
+      echo "Start release"
+      git config --global user.email "circleci@entur.no"
+      git config --global user.name "circleci"
+      git checkout master
+      mvn gitflow:release-start gitflow:release-finish -DskipTests=true -Prelease -DpostReleaseGoals=deploy -DargLine='-Prelease -DskipTests -s .circleci/settings.xml' -B -s .circleci/settings.xml
+      fi
+  - &import_gpg_key
+    name: Configure GPG private key for signing project artifacts in OSS Sonatype
+    command: |
+      echo $SONATYPE_GPG_KEY_BASE64 | base64 --decode | gpg --batch --no-tty --import --yes
 
 jobs:
-  deploy-artifactory:
+  deploy-nexus:
     docker:
       - image: cimg/openjdk:11.0
         auth:
@@ -22,15 +38,15 @@ jobs:
           name: Download Maven settings
           command: wget https://raw.githubusercontent.com/entur/circleci-toolbox-image-java11/master/tools/m2/settings.xml -O .circleci/settings.xml
       - run: *jfrog-login
-      - run: mvn gitflow:release -B -s .circleci/settings.xml -DargLine='-s .circleci/settings.xml' -DpostReleaseGoals=deploy -DskipTestProject=true
+      - run: *import_gpg_key
+      - run: *release
 
 workflows:
   version: 2
   build_deploy:
     jobs:
-      - deploy-artifactory:
+      - deploy-nexus:
           context:
-            - org-carbon
             - global
           filters:
             branches:
