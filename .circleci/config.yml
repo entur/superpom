@@ -17,7 +17,6 @@ aliases:
       git config --global user.name "circleci"
       git checkout master
       mvn gitflow:release-start gitflow:release-finish -DskipTests=true -Prelease -DpostReleaseGoals=deploy -DargLine='-Prelease -DskipTests -s .circleci/settings.xml' -B -s .circleci/settings.xml
-      fi
   - &import_gpg_key
     name: Configure GPG private key for signing project artifacts in OSS Sonatype
     command: |
@@ -55,8 +54,7 @@ workflows:
   build_deploy:
     jobs:
       - deploy-nexus:
-          context:
-            - global
+          context: global
           filters:
             branches:
               only: master

@@ -5,7 +5,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.6.6</version>
+        <version>2.6.8</version>
     </parent>
 
     <groupId>org.entur.ror</groupId>
@@ -43,7 +43,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
-        <jacoco-maven-plugin.version>0.8.7</jacoco-maven-plugin.version>
+        <jacoco-maven-plugin.version>0.8.8</jacoco-maven-plugin.version>
         <sonar-maven-plugin.version>3.9.1.2184</sonar-maven-plugin.version>
 
         <google-pubsub-emulator.version>0.1.2</google-pubsub-emulator.version>
@@ -53,7 +53,7 @@
         <maven-enforcer-plugin.version>1.4.1</maven-enforcer-plugin.version>
         <maven-scm-api.version>1.12.2</maven-scm-api.version>
         <maven-scm-provider-gitexe.version>1.12.2</maven-scm-provider-gitexe.version>
-        <owasp-dependency-check-plugin.version>6.5.3</owasp-dependency-check-plugin.version>
+        <owasp-dependency-check-plugin.version>7.1.0</owasp-dependency-check-plugin.version>
         <maven-gpg-plugin.version>1.6</maven-gpg-plugin.version>
         <gitflow-maven-plugin.version>1.17.0</gitflow-maven-plugin.version>
 
@@ -165,6 +165,7 @@
                         <failBuildOnCVSS>7</failBuildOnCVSS>
                         <failOnError>false</failOnError>
                         <assemblyAnalyzerEnabled>false</assemblyAnalyzerEnabled>
+                        <ossindexAnalyzerEnabled>false</ossindexAnalyzerEnabled>
                         <suppressionFiles>
                             <suppressionFile>dependencycheck-suppression.xml</suppressionFile>
                         </suppressionFiles>
