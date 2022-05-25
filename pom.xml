@@ -49,6 +49,7 @@
         <google-pubsub-emulator.version>0.1.2</google-pubsub-emulator.version>
 
         <!-- overrides version 3.0.0-M2 defined in spring Boot BOM which does not detect inherited plugin versions -->
+        <nexus-staging-maven-plugin.version>1.6.8</nexus-staging-maven-plugin.version>
         <maven-enforcer-plugin.version>1.4.1</maven-enforcer-plugin.version>
         <maven-scm-api.version>1.12.2</maven-scm-api.version>
         <maven-scm-provider-gitexe.version>1.12.2</maven-scm-provider-gitexe.version>
