@@ -5,7 +5,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.6.8</version>
+        <version>2.7.1</version>
     </parent>
 
     <groupId>org.entur.ror</groupId>
@@ -55,7 +55,7 @@
         <maven-gpg-plugin.version>1.6</maven-gpg-plugin.version>
         <gitflow-maven-plugin.version>1.17.0</gitflow-maven-plugin.version>
 
-        <logstash.version>6.6</logstash.version>
+        <logstash.version>7.2</logstash.version>
         <google.cloud.bom-version>25.2.0</google.cloud.bom-version>
 
         <!-- Downloading PubSub emulator is disabled by default-->
