@@ -10,7 +10,7 @@
 
     <groupId>org.entur.ror</groupId>
     <artifactId>superpom</artifactId>
-    <version>1.51-SNAPSHOT</version>
+    <version>1.51</version>
     <packaging>pom</packaging>
 
     <name>superpom</name>
