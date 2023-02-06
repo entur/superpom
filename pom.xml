@@ -51,12 +51,12 @@
         <nexus-staging-maven-plugin.version>1.6.8</nexus-staging-maven-plugin.version>
         <maven-scm-api.version>1.12.2</maven-scm-api.version>
         <maven-scm-provider-gitexe.version>1.12.2</maven-scm-provider-gitexe.version>
-        <owasp-dependency-check-plugin.version>8.0.1</owasp-dependency-check-plugin.version>
+        <owasp-dependency-check-plugin.version>8.0.2</owasp-dependency-check-plugin.version>
         <maven-gpg-plugin.version>1.6</maven-gpg-plugin.version>
-        <gitflow-maven-plugin.version>1.17.0</gitflow-maven-plugin.version>
+        <gitflow-maven-plugin.version>1.19.0</gitflow-maven-plugin.version>
 
         <logstash.version>7.2</logstash.version>
-        <google.cloud.bom-version>26.1.1</google.cloud.bom-version>
+        <google.cloud.bom-version>26.5.0</google.cloud.bom-version>
 
         <!-- Downloading PubSub emulator is disabled by default-->
         <entur.google.pubsub.emulator.download.skip>true</entur.google.pubsub.emulator.download.skip>
