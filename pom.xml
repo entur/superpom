@@ -56,7 +56,7 @@
         <gitflow-maven-plugin.version>1.19.0</gitflow-maven-plugin.version>
 
         <logstash.version>7.2</logstash.version>
-        <google.cloud.bom-version>26.7.0</google.cloud.bom-version>
+        <google.cloud.bom-version>26.14.0</google.cloud.bom-version>
 
         <!-- Downloading PubSub emulator is disabled by default-->
         <entur.google.pubsub.emulator.download.skip>true</entur.google.pubsub.emulator.download.skip>
