@@ -51,7 +51,7 @@
         <nexus-staging-maven-plugin.version>1.6.8</nexus-staging-maven-plugin.version>
         <maven-scm-api.version>1.12.2</maven-scm-api.version>
         <maven-scm-provider-gitexe.version>1.12.2</maven-scm-provider-gitexe.version>
-        <owasp-dependency-check-plugin.version>8.1.0</owasp-dependency-check-plugin.version>
+        <owasp-dependency-check-plugin.version>8.2.1</owasp-dependency-check-plugin.version>
         <maven-gpg-plugin.version>1.6</maven-gpg-plugin.version>
         <gitflow-maven-plugin.version>1.19.0</gitflow-maven-plugin.version>
 
