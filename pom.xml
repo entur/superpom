@@ -52,7 +52,7 @@
         <maven-scm-api.version>1.12.2</maven-scm-api.version>
         <maven-scm-provider-gitexe.version>1.12.2</maven-scm-provider-gitexe.version>
         <owasp-dependency-check-plugin.version>8.3.1</owasp-dependency-check-plugin.version>
-        <maven-gpg-plugin.version>1.6</maven-gpg-plugin.version>
+        <maven-gpg-plugin.version>3.1.0</maven-gpg-plugin.version>
         <gitflow-maven-plugin.version>1.19.0</gitflow-maven-plugin.version>
 
         <logstash.version>7.4</logstash.version>
