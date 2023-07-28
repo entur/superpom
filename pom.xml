@@ -302,7 +302,7 @@
                     <verbose>true</verbose>
                     <commitMessagePrefix>[ci skip]</commitMessagePrefix>
                     <gitFlowConfig>
-                        <developmentBranch>master</developmentBranch>
+                        <developmentBranch>1.x</developmentBranch>
                     </gitFlowConfig>
                 </configuration>
             </plugin>
