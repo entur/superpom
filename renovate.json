@@ -1,6 +1,7 @@
 {
   "extends": [
-    "config:base"
+    "config:base",
+    "github>entur/ror-renovate-config:groupNonMajorWeekly"
   ],
   "baseBranches": [
     "master",
