@@ -48,7 +48,7 @@
 
         <google-pubsub-emulator.version>0.1.2</google-pubsub-emulator.version>
 
-        <nexus-staging-maven-plugin.version>1.6.13</nexus-staging-maven-plugin.version>
+        <nexus-staging-maven-plugin.version>1.6.14</nexus-staging-maven-plugin.version>
         <maven-scm-api.version>1.12.2</maven-scm-api.version>
         <maven-scm-provider-gitexe.version>1.12.2</maven-scm-provider-gitexe.version>
         <owasp-dependency-check-plugin.version>9.0.9</owasp-dependency-check-plugin.version>
