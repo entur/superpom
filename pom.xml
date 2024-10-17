@@ -55,7 +55,7 @@
         <maven-gpg-plugin.version>1.6</maven-gpg-plugin.version>
         <gitflow-maven-plugin.version>1.21.0</gitflow-maven-plugin.version>
 
-        <logstash.version>7.4</logstash.version>
+        <logstash.version>8.0</logstash.version>
         <google.cloud.bom-version>26.49.0</google.cloud.bom-version>
 
         <!-- Downloading PubSub emulator is disabled by default-->
