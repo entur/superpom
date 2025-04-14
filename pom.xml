@@ -43,20 +43,20 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
-        <jacoco-maven-plugin.version>0.8.12</jacoco-maven-plugin.version>
-        <sonar-maven-plugin.version>5.0.0.4389</sonar-maven-plugin.version>
+        <jacoco-maven-plugin.version>0.8.13</jacoco-maven-plugin.version>
+        <sonar-maven-plugin.version>5.1.0.4751</sonar-maven-plugin.version>
 
         <google-pubsub-emulator.version>0.1.2</google-pubsub-emulator.version>
 
         <nexus-staging-maven-plugin.version>1.7.0</nexus-staging-maven-plugin.version>
         <maven-scm-api.version>1.12.2</maven-scm-api.version>
         <maven-scm-provider-gitexe.version>1.12.2</maven-scm-provider-gitexe.version>
-        <owasp-dependency-check-plugin.version>12.0.2</owasp-dependency-check-plugin.version>
+        <owasp-dependency-check-plugin.version>12.1.1</owasp-dependency-check-plugin.version>
         <maven-gpg-plugin.version>1.6</maven-gpg-plugin.version>
         <gitflow-maven-plugin.version>1.21.0</gitflow-maven-plugin.version>
 
-        <logstash.version>8.0</logstash.version>
-        <google.cloud.bom-version>26.54.0</google.cloud.bom-version>
+        <logstash.version>8.1</logstash.version>
+        <google.cloud.bom-version>26.59.0</google.cloud.bom-version>
 
         <!-- Downloading PubSub emulator is disabled by default-->
         <entur.google.pubsub.emulator.download.skip>true</entur.google.pubsub.emulator.download.skip>
