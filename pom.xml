@@ -15,6 +15,7 @@
 
     <name>superpom</name>
     <description>Super pom for routes and journey planning components</description>
+    <url>https://github.com/entur/superpom</url>
     <organization>
         <name>Entur</name>
         <url>https://www.entur.org/</url>
