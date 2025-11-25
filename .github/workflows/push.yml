@@ -2,10 +2,10 @@ name: Build and push
 on:
   push:
     branches:
-      - master
+      - v4
   pull_request:
     branches:
-      - master
+      - v4
 env:
     JFROG_USER: ${{ secrets.ARTIFACTORY_AUTH_USER }}
     JFROG_PASS: ${{ secrets.ARTIFACTORY_AUTH_TOKEN }}
