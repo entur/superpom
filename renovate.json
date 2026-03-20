@@ -1,22 +1,21 @@
 {
-  "extends": [
-    "config:base"
-  ],
-  "baseBranches": [
-    "master"
-  ],
+  "extends": ["config:base"],
+  "baseBranches": ["master", "5.x"],
   "separateMinorPatch": true,
   "packageRules": [
     {
       "matchPackageNames": [
         "org.springframework.boot:spring-boot-starter-parent"
       ],
-      "matchUpdateTypes": [
-        "patch",
-        "pin",
-        "digest"
-      ],
+      "matchUpdateTypes": ["patch", "pin", "digest"],
       "automerge": true
+    },
+    {
+      "matchPackageNames": [
+        "org.springframework.boot:spring-boot-starter-parent"
+      ],
+      "matchBaseBranches": ["5.x"],
+      "allowedVersions": "<4.0.0"
     }
   ]
 }
