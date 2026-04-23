@@ -1,6 +1,9 @@
 {
-  "extends": ["config:base"],
-  "baseBranches": ["master", "5.x"],
+  "extends": ["config:recommended"],
+  "baseBranchPatterns": [
+    "master",
+    "5.x"
+  ],
   "separateMinorPatch": true,
   "packageRules": [
     {
