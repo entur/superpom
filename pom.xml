@@ -266,6 +266,19 @@
                 <groupId>org.sonarsource.scanner.maven</groupId>
                 <artifactId>sonar-maven-plugin</artifactId>
                 <version>${sonar-maven-plugin.version}</version>
+                <dependencies>
+                    <!-- sonar-scanner-java-library -> ayza -> sude, but ayza declares `sude`
+                         without a version (it is managed only in ayza-parent), so the version
+                         is not applied in the plugin classpath realm and sude is dropped,
+                         causing ClassNotFoundException: nl.altindag.sude.LoggerFactory when the
+                         scanner initialises its HTTPS client. Pin it explicitly until SonarSource
+                         fixes the scanner dependency chain (still broken in scanner-maven 5.7.0). -->
+                    <dependency>
+                        <groupId>io.github.hakky54</groupId>
+                        <artifactId>sude</artifactId>
+                        <version>2.0.2</version>
+                    </dependency>
+                </dependencies>
             </plugin>
 
             <plugin>
