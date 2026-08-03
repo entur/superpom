@@ -15,13 +15,13 @@ copy its version numbers into this file where they will go stale.
 ## Build
 
 ```bash
-mvn package                  # POM validation, enforcer, plugin wiring
-mvn dependency-check:check   # OWASP scan, requires NVD_API_KEY
+./mvnw package                  # POM validation, enforcer, plugin wiring
+./mvnw dependency-check:check   # OWASP scan, requires NVD_API_KEY
 ```
 
-CI runs `mvn package -s .github/workflows/settings.xml`, but that settings file is not in the
+CI runs `./mvnw package -s .github/workflows/settings.xml`, but that settings file is not in the
 repo: `push.yml` downloads it from `entur/ror-maven-settings` at build time. Locally, use plain
-`mvn package`.
+`./mvnw package`.
 
 ## What the POM manages
 
@@ -35,7 +35,7 @@ suggests:
   actually run in its lifecycle: enforcer (Java version, `requirePluginVersions` at WARN),
   surefire, jacoco (agent, report, check), failsafe (`integration-test` + `verify`), source.
 - Also in `build/plugins` but declared with no `<executions>`, so they run only when invoked
-  explicitly: sonar (`mvn sonar:sonar`), javadoc, gitflow (`mvn gitflow:release-start`;
+  explicitly: sonar (`./mvnw sonar:sonar`), javadoc, gitflow (`./mvnw gitflow:release-start`;
   `developmentBranch` = `master`, commits prefixed `[ci skip]`). Editing these three does not
   change any consumer's build.
 - `pluginManagement` supplies config only when the plugin actually runs: compiler
@@ -43,14 +43,14 @@ suggests:
   dependency-check. For compiler and surefire that happens via default lifecycle bindings, so
   the config does reach children. OWASP has no `<execution>` declared anywhere, so despite the
   CVSS threshold being configured here the scan never runs by inheritance: it needs
-  `mvn dependency-check:check`, or an execution added in the child. Adding a `<phase>` here
+  `./mvnw dependency-check:check`, or an execution added in the child. Adding a `<phase>` here
   will not help.
 
 ## Things that are easy to get wrong
 
 **Every change ships to every consumer** (baba, uttu, lamassu, ...). Nothing here compiles
-Java, so a green `mvn package` proves very little. Validate plugin and BOM bumps by forcing
-real resolution, e.g. `mvn dependency:resolve-plugins` or `mvn <prefix>:help`, instead of
+Java, so a green `./mvnw package` proves very little. Validate plugin and BOM bumps by forcing
+real resolution, e.g. `./mvnw dependency:resolve-plugins` or `./mvnw <prefix>:help`, instead of
 assuming a version that exists also works.
 
 **`java.version` gates every JDK in the pipeline.** It feeds `maven-compiler-plugin`'s
@@ -62,7 +62,7 @@ too: adopting a new major means their local and CI JDKs must meet it, unless the
 **Two JDKs need bumping, not one.** `java-version` in the `maven-package` job of
 `.github/workflows/push.yml`, *and* the `java_version` input to `publish-release`, which
 defaults to 21 in `entur/gha-maven-central`. Miss the second and the build goes green, then the
-release dies at the enforcer during `mvn -Ppublication deploy`.
+release dies at the enforcer during `./mvnw -Ppublication deploy`.
 
 **Never test a Java bump with `-Djava.version=N`.** The name collides with the JVM's own
 `java.version` system property, so `-D` sets the enforcer's requirement *and* the detected JDK
@@ -104,8 +104,8 @@ on first load, *after* a completely green build. Renovate cannot catch this, sin
 properties have no dependency attached. After bumping the BOM, confirm the pins still match:
 
 ```bash
-mvn dependency:list        # in a child: what protobuf-java/grpc-core actually resolve to
-mvn help:effective-pom     # in a child: grep <protoc> and compare
+./mvnw dependency:list        # in a child: what protobuf-java/grpc-core actually resolve to
+./mvnw help:effective-pom     # in a child: grep <protoc> and compare
 ```
 
 The general rule: Spring Boot's *direct* `dependencyManagement` entries win over superpom's

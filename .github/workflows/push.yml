@@ -39,7 +39,7 @@ jobs:
             ${{ runner.os }}-
 
       - name: Run maven build
-        run: mvn package -s .github/workflows/settings.xml
+        run: ./mvnw package -s .github/workflows/settings.xml
   publish-release:
     needs: [maven-package]
     if: github.repository_owner == 'entur' && github.event_name == 'push'
