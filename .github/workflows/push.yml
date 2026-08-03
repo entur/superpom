@@ -51,6 +51,4 @@ jobs:
       java_version: 25
       push_to_repo: true
       snapshot: false
-      # One-off: 'minor' would compute 7.1.0 from 7.0.0-SNAPSHOT and skip 7.0.0 entirely.
-      # Revert to 'minor' once 7.0.0 is released.
-      next_version: '7.0.0'
+      next_version: 'minor'
