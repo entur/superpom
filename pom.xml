@@ -10,8 +10,12 @@
 
     <groupId>org.entur.ror</groupId>
     <artifactId>superpom</artifactId>
-    <version>7.0.1-SNAPSHOT</version>
+    <version>8.0.0-SNAPSHOT</version>
     <packaging>pom</packaging>
+
+    <modules>
+        <module>jfrog-artifactory</module>
+    </modules>
 
     <name>superpom</name>
     <description>Super pom for routes and journey planning components</description>
@@ -25,19 +29,6 @@
         <developerConnection>scm:git:ssh://git@github.com/entur/superpom.git</developerConnection>
       <tag>HEAD</tag>
     </scm>
-    <distributionManagement>
-        <repository>
-            <id>central</id>
-            <name>entur2-releases</name>
-            <url>https://entur2.jfrog.io/entur2/libs-release-local</url>
-        </repository>
-        <snapshotRepository>
-            <id>snapshots</id>
-            <name>entur2-snapshots</name>
-            <url>https://entur2.jfrog.io/entur2/libs-snapshot-local</url>
-        </snapshotRepository>
-    </distributionManagement>
-
     <properties>
 
         <java.version>25</java.version>
