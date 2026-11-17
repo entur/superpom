@@ -25,18 +25,6 @@
         <developerConnection>scm:git:ssh://git@github.com/entur/superpom.git</developerConnection>
       <tag>HEAD</tag>
     </scm>
-    <distributionManagement>
-        <repository>
-            <id>central</id>
-            <name>entur2-releases</name>
-            <url>https://entur2.jfrog.io/entur2/libs-release-local</url>
-        </repository>
-        <snapshotRepository>
-            <id>snapshots</id>
-            <name>entur2-snapshots</name>
-            <url>https://entur2.jfrog.io/entur2/libs-snapshot-local</url>
-        </snapshotRepository>
-    </distributionManagement>
 
     <properties>
 
@@ -44,16 +32,16 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
-        <jacoco-maven-plugin.version>0.8.15</jacoco-maven-plugin.version>
-        <sonar-maven-plugin.version>5.7.0.6970</sonar-maven-plugin.version>
+        <jacoco-maven-plugin.version>0.8.16</jacoco-maven-plugin.version>
+        <sonar-maven-plugin.version>5.9.0.7382</sonar-maven-plugin.version>
 
         <maven-scm-api.version>2.2.1</maven-scm-api.version>
         <maven-scm-provider-gitexe.version>2.2.1</maven-scm-provider-gitexe.version>
-        <owasp-dependency-check-plugin.version>12.2.2</owasp-dependency-check-plugin.version>
+        <owasp-dependency-check-plugin.version>13.0.0</owasp-dependency-check-plugin.version>
         <gitflow-maven-plugin.version>1.21.0</gitflow-maven-plugin.version>
-        <jreleaser-maven-plugin.version>1.25.0</jreleaser-maven-plugin.version>
+        <jreleaser-maven-plugin.version>1.27.0</jreleaser-maven-plugin.version>
         <logstash.version>9.0</logstash.version>
-        <google.cloud.bom-version>26.86.0</google.cloud.bom-version>
+        <google.cloud.bom-version>26.93.0</google.cloud.bom-version>
 
         <!-- Spring Boot manages protobuf/grpc via imported BOMs, which lose to libraries-bom,
              but it drives protoc and protoc-gen-grpc-java from these plain properties. Left
@@ -61,7 +49,7 @@
              "Detected incompatible Protobuf Gencode/Runtime versions". Keep these aligned with
              what libraries-bom actually resolves. -->
         <protobuf-java.version>4.33.6</protobuf-java.version>
-        <grpc-java.version>1.82.2</grpc-java.version>
+        <grpc-java.version>1.83.0</grpc-java.version>
 
     </properties>
 
