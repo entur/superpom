@@ -49,7 +49,7 @@
              "Detected incompatible Protobuf Gencode/Runtime versions". Keep these aligned with
              what libraries-bom actually resolves. -->
         <protobuf-java.version>4.33.6</protobuf-java.version>
-        <grpc-java.version>1.82.2</grpc-java.version>
+        <grpc-java.version>1.83.0</grpc-java.version>
 
     </properties>
 
