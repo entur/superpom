@@ -41,7 +41,7 @@
         <gitflow-maven-plugin.version>1.21.0</gitflow-maven-plugin.version>
         <jreleaser-maven-plugin.version>1.27.0</jreleaser-maven-plugin.version>
         <logstash.version>9.0</logstash.version>
-        <google.cloud.bom-version>26.93.0</google.cloud.bom-version>
+        <google.cloud.bom-version>26.94.0</google.cloud.bom-version>
 
         <!-- Spring Boot manages protobuf/grpc via imported BOMs, which lose to libraries-bom,
              but it drives protoc and protoc-gen-grpc-java from these plain properties. Left
